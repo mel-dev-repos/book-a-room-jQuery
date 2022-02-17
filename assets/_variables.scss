@@ -1,0 +1,35 @@
+$font_small : 14px;
+$font_medium : 16px;
+$font_large : 18px;
+$font_xlarge : 22px;
+$font_xxlarge : 26px;
+
+$palette: (
+    neutral :(
+        light : #f4f4f4,
+        dark : #111
+    )
+    blue: (
+        base:   #1F1F2C,
+        dark:   #171720,
+        darker: #111118,
+        darkest:#15151e,
+    ),
+    yellow: (
+        base:   #c5bc58,   
+    ),
+    green:(
+        base : #6fb586,
+    )
+    smoke:(
+        base:   #bbb,
+        dark :  #717171,
+        darker: #323232,
+    ),
+    red:(
+        base:#d9534f
+    )
+);
+.banner{
+   background-color: map-get(map-get($palette, blue), base);
+}

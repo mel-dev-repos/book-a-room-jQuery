@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+      <link rel="stylesheet" href="/resources/demos/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="./assets/style.css" />
+      <title>Document</title>
+   </head>
+   <body>
+      <div class="contaner">
+         <header id="header">
+            <nav class="navbar">
+               <img
+                  class="first-logo"
+                  src="./assets/pic/logo.webp"
+                  alt="logo"
+               />
+               <ul class="navbar-ul">
+                  <div class="dropdown">
+                     <li id="home" class="dropbtn">
+                        home
+                        <hr />
+                     </li>
+                     <span
+                        class="iconify"
+                        id="ep"
+                        data-icon="ep:arrow-down"
+                     ></span>
+
+                     <div class="dropdown-content">
+                        <a class="homelight" href="#"
+                           >HOME LIGHT
+                           <hr />
+                        </a>
+                        <a href="#" class="homedark"
+                           >HOME DARK
+                           <hr class="hrDark" />
+                        </a>
+                     </div>
+                  </div>
+                  <li class="rooms">
+                     rooms
+                     <div class="hoverLineRooms"></div>
+                  </li>
+
+                  <li class="location">
+                     location
+                     <div class="hoverLineLocation"></div>
+                  </li>
+                  <li class="act">
+                     activities
+                     <div class="hoverLineAct"></div>
+                  </li>
+
+                  <li class="res">
+                     restaurant
+                     <div class="hoverLineRes"></div>
+                  </li>
+                  <li class="spa">
+                     spa
+                     <div class="hoverLinespa"></div>
+                  </li>
+                  <li class="contact">
+                     contact
+                     <div class="hoverLineContact"></div>
+                  </li>
+                  <div class="moredropdown">
+                     <li class="moredropbtn">
+                        MORE
+                        <div class="hoverLine"></div>
+                     </li>
+                     <span
+                        class="iconify"
+                        id="arrowDown"
+                        data-icon="ep:arrow-down"
+                     ></span>
+                     <div class="moredropdown-content">
+                        <a class="shop" href="#"
+                           >WOOCOMMERCE SHOP
+                           <div class="hoverLineShop"></div>
+                        </a>
+                        <a class="gallery" href="#"
+                           >GALLERY
+                           <div class="hoverLineGallery"></div>
+                        </a>
+                        <a class="hotel" href="#"
+                           >HOTEL GYM
+                           <div class="hoverLineHotel"></div>
+                        </a>
+                        <a class="offer" href="#"
+                           >PACKAGE OFFER
+                           <div class="hoverLineOffer"></div>
+                        </a>
+                        <a class="blog" href="#"
+                           >BLOG
+                           <div class="hoverLineBlog"></div>
+                        </a>
+                        <a class="admin" href="#"
+                           >ADMIN DEMO
+                           <button>NEW!</button>
+                           <div class="hoverLineAdmin"></div>
+                        </a>
+                        <a class="all" href="#"
+                           >ALL DEMOES
+                           <button>NEW!</button>
+                           <div class="hoverLineAll"></div>
+                        </a>
+                     </div>
+                  </div>
+               </ul>
+               <div class="button">
+                  <div class="eff"></div>
+                  <a href="#" class="text"> BOOK NOW! </a>
+               </div>
+               <div class="three col">
+                  <div class="extra">extra</div>
+                  <div class="hamburger" id="hamburger-1">
+                     <span class="line"></span>
+                     <span class="line"></span>
+                     <span class="line"></span>
+                  </div>
+               </div>
+            </nav>
+
+            <!-- modal to show avilable rooms -->
+            <div class="modal-container">
+               <table>
+                 <thead>
+                   <tr>
+                     <th>from</th>
+                     <th>to</th>
+                     <th>room</th>
+                     <th>bed</th>
+                   </tr>
+                 </thead>
+                 <tbody class="table-body">
+                  <!-- content of the modal table  -->
+                 </tbody>
+               </table>
+             </div> 
+         </header>
+          <a class="return-to-top" href="#header" id="return-to-top">
+            <i class="back-top fa fa-chevron-up"></i>
+          </a>
+         <!-- slide bar that open with hamburger -->
+         <div class="drawer-menu">
+            <div class="just-padding">
+              <div class="nav-open-menu">
+                <ul class="navbar-ul">
+                  <div class="dropdown">
+                     <li id="home" class="dropbtn">
+                        home
+                        <hr />
+                     </li>
+                     <span
+                        class="iconify"
+                        id="ep"
+                        data-icon="ep:arrow-down"
+                     ></span>
+
+                     <div class="dropdown-content">
+                        <a class="homelight" href="#"
+                           >HOME LIGHT
+                           <hr />
+                        </a>
+                        <a href="#" class="homedark"
+                           >HOME DARK
+                           <hr class="hrDark" />
+                        </a>
+                     </div>
+                  </div>
+                  <li class="rooms">
+                     rooms
+                     <div class="hoverLineRooms"></div>
+                  </li>
+
+                  <li class="location">
+                     location
+                     <div class="hoverLineLocation"></div>
+                  </li>
+                  <li class="act">
+                     activities
+                     <div class="hoverLineAct"></div>
+                  </li>
+
+                  <li class="res">
+                     restaurant
+                     <div class="hoverLineRes"></div>
+                  </li>
+                  <li class="spa">
+                     spa
+                     <div class="hoverLinespa"></div>
+                  </li>
+                  <li class="contact">
+                     contact
+                     <div class="hoverLineContact"></div>
+                  </li>
+                  <div class="moredropdown">
+                     <li class="moredropbtn">
+                        MORE
+                        <div class="hoverLine"></div>
+                     </li>
+                     <span
+                        class="iconify"
+                        id="arrowDown"
+                        data-icon="ep:arrow-down"
+                     ></span>
+                     <div class="moredropdown-content">
+                        <a class="shop" href="#"
+                           >WOOCOMMERCE SHOP
+                           <div class="hoverLineShop"></div>
+                        </a>
+                        <a class="gallery" href="#"
+                           >GALLERY
+                           <div class="hoverLineGallery"></div>
+                        </a>
+                        <a class="hotel" href="#"
+                           >HOTEL GYM
+                           <div class="hoverLineHotel"></div>
+                        </a>
+                        <a class="offer" href="#"
+                           >PACKAGE OFFER
+                           <div class="hoverLineOffer"></div>
+                        </a>
+                        <a class="blog" href="#"
+                           >BLOG
+                           <div class="hoverLineBlog"></div>
+                        </a>
+                        <a class="admin" href="#"
+                           >ADMIN DEMO
+                           <button>NEW!</button>
+                           <div class="hoverLineAdmin"></div>
+                        </a>
+                        <a class="all" href="#"
+                           >ALL DEMOES
+                           <button>NEW!</button>
+                           <div class="hoverLineAll"></div>
+                        </a>
+                     </div>
+                  </div>
+               </ul>
+              </div>
+              <a class="reserve" href="#"
+                >reservation & booking
+                <div class="hoverLineReserve"></div>
+              </a>
+              <br />
+              <a class="grid" href="#"
+                >GRIDS & MASONRY VIEWS
+                <div class="hoverLineGrid"></div>
+              </a>
+              <div class="border-side">
+                <a class="roomLi" href="#"
+                  >ROOMS LIST GRID
+                  <div class="hoverLineLi"></div>
+                </a>
+                <a class="blog" href="#">
+                  BLOG MASONRY GRID
+                  <div class="hoverLineMasonry"></div>
+                </a>
+                <a class="test" href="#"
+                  >TESTIMONIALS MASONRY GRID
+                  <div class="hoverLineTest"></div>
+                </a>
+              </div>
+              <a class="shortCods" href="#"
+                >SLIDER SHORTCODES
+                <div class="hoverLineShort"></div>
+              </a>
+              <div class="border-side">
+                <a class="sliderRoom" href="#"
+                  >Room Sliders
+                  <div class="hoverLineSlider"></div>
+                </a>
+                <a class="sevice" href="#"
+                  >Services Sliders
+                  <div class="hoverLineRService"></div>
+                </a>
+              </div>
+              <a class="view" href="#"
+                >Single Page Views
+                <div class="hoverLineView"></div>
+              </a>
+              <div class="border-side">
+                <a class="singleroom" href="#"
+                  >"Room Single View
+                  <div class="hoverLineSingle"></div>
+                </a>
+                <a class="singleView" href="#"
+                  >Service Single View
+                  <div class="hoverLineSingleView"></div>
+                </a>
+                <a class="post" href="#"
+                  >Post Single View
+                  <div class="hoverLinePost"></div>
+                </a>
+                <a class="Fullscreen" href="#"
+                  >Post Single Fullscreen
+                  <div class="hoverLineFull"></div>
+                </a>
+              </div>
+              <a class="err" href="#"
+                >Error 404 Page
+                <div class="hoverLineErr"></div>
+              </a>
+              <a class="theme" href="#"
+                >Buy this theme!
+                <div class="hoverLineTheme"></div>
+              </a>
+              <hr />
+              <p class="paragraph">
+                This is a sidebar that can be used to put an extra menu with details
+                that don't need to be on the main menu. It also serves as the mobile
+                menu area!!
+              </p>
+    
+              <h2 style="color: red">(+30) 210 1234567</h2>
+            </div>
+          </div>
+
+      <!-- first image slider with jQuery -->
+         <div class="slider">
+            <a href="#0" class="next control"
+               ><img src="./assets/pic/right-arrow.png" alt="right-arrow"></a>
+            <a href="#0" class="prev control"
+               ><img src="./assets/pic/left-arrow.png" alt="left-arrow"></a>
+
+            <ul class="UL-slider">
+               <li class="firstImg slider-image">
+                  <div class="slider-txt">
+                     <div class="t2">RELAX &amp; REJUVENATE</div>
+                     <div class="t1">WITH SPA SALON FACILITIES</div>
+                     <div class="mainBtn">
+                      <div class="hiddenPart"></div>
+                      <a href="#" class="maintag"> DISCOVER TREATMENTS</a>
+                    </div>
+                     <!-- <div>
+                        <button class="slider-btn">discover treatments</button>
+                     </div> -->
+                  </div>
+               </li>
+
+               <li class="secondImg slider-image">
+                  <div class="slider-txt">
+                     <div class="t2 asd">INDOOR &amp; OUTDOOR</div>
+                     <div class="t1 asd">ENJOY A LUXURY EXPERIENCE</div>
+                     <!-- <div>
+                        <button class="slider-btn">rooms & suites</button>
+                     </div> -->
+                     <div class="mainBtn2">
+                      <div class="hiddenPart2"></div>
+                      <a href="#" class="maintag2">  ROOMS & SUITS</a>
+                    </div>
+                  </div>
+               </li>
+               <li class="thirdImg slider-image">
+                  <div class="slider-txt">
+                     <div class="t2">WILD BEAUTY</div>
+                     <div class="t1">IN THE PERFECT LOCATION</div>
+                    
+                     <div class="mainBtn3">
+                        <div class="hiddenPart3"></div>
+                        <a href="#" class="maintag3">EXPLORE</a>
+                    </div>
+                     <!-- <button class="slider-btn">explor</button> -->
+                  </div>
+               </li>
+            </ul>
+         </div>
+
+
+         <!-- the booking box -->
+         <div class="dark-center-box" >
+            <div class="inputs">
+              <div class="date-input">
+                <label for="arrival-date">check in date</label>
+                <input  type="text" placeholder="select arrival date"  id="arrival-date">
+              </div>
+              <div class="date-input">
+                <label for="departure-date">check out date</label>
+                <input type="text" placeholder="select departure date"  id="departure-date">
+              </div>
+              <div class="date-input">
+               <label for="room">considered room</label>
+               <input  type="text" placeholder="number of bed" id="numOfBed">
+             </div>
+            </div>
+         <div class="button-req">
+            <div class="eff-req"></div>
+               <a href="#" class="text-req">REQUEST A QUOTE</a>
+            </div>
+         </div>
+      </div>
+
+      <!-- first text part on center of the page -->
+         <div class="mainTxt" >
+            <h1 class="welcomeTxt">WELCOME</h1>
+            <h2 class="hotelTxt">XENIA HOTEL</h2>
+            <h2 class="lastTxt">ONE OF THE BEST PLACES TO RELAX & ENJOY</h2>
+           <div class="Ornament-image"> 
+            <img src="./assets/pic/Ornament.png" alt="Ornament">
+         </div>
+             <div class="text">
+          <h2>PROVIDING QUALITY SERVICES SINCE ’98</h2>
+            <p>We are proud to say that since our opening in ’98 we have been serving our visitors in the best possible way. Above you there let to brought over seas cattle he great give, day creepeth you’ll their sea called don’t their given dry, make said so lesser divided, firmament fill fowl night second cattle over sixth evening god moveth day stars good evening years you’re beginning have you’ll fowl. Rule life spirit, whales him.</p>
+           </div>
+          </div>
+          <div class="introduce">
+            <img class="RichardPhoto" src="./assets/pic/avatar-1.jpg" alt="">
+            <h3>Yours truly,</h3>
+            <h5>Richard</h5>
+          </div>
+
+
+      <!-- three card with hover -->
+         <div class="card-boxes">
+            <div class="card">
+               <div class="image">
+                  <img src="./assets/pic/spa-banner.jpg" alt="massage" />
+                  <div class="card-hover">
+                     <div class="card-hover-text">
+                        <p>XENIA hosts an amazing place to relax; we call it paradise you may call it XENIA Spa. We would love to introduce you to this amazing relaxing and refreshing experience.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="card-logo">
+                  <img src="./assets/pic/logo_spa.webp" alt="spalogo" />
+               </div>
+               <h4>spa salon</h4>
+               
+            </div>
+            <div class="card">
+               <div class="image">
+                  <img src="./assets/pic/gym-banner.jpg" alt="gym" />
+                  <div class="card-hover">
+                     <div class="card-hover-text">
+                        <p>Keep up with your fitness routine whilst you’re away with our free in-house gym. Packed with cardio and resistance equipment and free weights, you can unwind after a busy day in the capital at the 5-star XENIA Hotel.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="card-logo">
+                  <img src="./assets/pic/logo_gym.webp" alt="gymlogo" />
+               </div>
+               <h4>gym</h4>
+               
+            </div>
+            <div class="card">
+               <div class="image">
+                  <img
+                     src="./assets/pic/restaurant-banner.jpg"
+                     alt="restaurant"
+                  />
+                  <div class="card-hover">
+                     <div class="card-hover-text">
+                        <p>The XENIA Hotel Restaurant has been renovated and is ready to welcome you! For&nbsp;breakfast&nbsp;or&nbsp;lunch, the elegant environment of the XENIA Roof Garden Restaurant creates a tranquil atmosphere, while&nbsp;dinner&nbsp;is perfect when the city lights come on.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="card-logo">
+                  <img
+                     src="./assets/pic/logo_restaurant.webp"
+                     alt="restaurantlogo"
+                  />
+               </div>
+               <h4>restaurant</h4>
+               
+            </div>
+         </div>
+         <div class="Bg-bed">
+            <h4>GET 15% OFF TODAY</h4>
+            <img class="Ornament" src="./assets/pic/Ornament.png" alt="Ornament">
+            <p>Book your stay online and secure your summer vacations on time with an amazing discount </p>
+            <div class="buttonShowRooms">
+              <div class="hiddenBtn"></div>
+              <a href="#" class="textShowBtn"> VIEW OUR ROOMS</a>
+            </div>
+          </div>
+        
+          </div>
+          <!-- twice carousel bed images with black backGraund   -->
+          <div class="parentOfDotsSlider">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+              <!-- every card title and their images -->
+              <div class="mySlides fade">
+                <!--parent of whole card -->
+                <div class="main-card">
+                  <div class="textOfCard">
+                    <h2><a href="#"> SINGLE ROOM</a></h2>
+                    <p>SINGLE ROOM WITH SEA VIEW</p>
+                    <span class="iconify" data-icon="cil:tv"></span>
+                    <span class="iconify" data-icon="la:glass-cheers"></span>
+                    <span class="iconify" data-icon="ph:bathtub-fill"></span>
+                    <p class="excerpt">
+                      More than 100 rooms, suites and apartments have accommodated
+                      many illustrious residents, such as members of resort royal
+                      families, famous politicians and stars of film and opera. The
+                      hotel is a masterpiece rediscovered.
+                    </p>
+                    <a class="readMore" href="#">READ MORE
+                       <hr class="read-more-hover">
+                    </a>
+                  </div>
+                  <img
+                    src="./assets/pic/room_1_n_1-1024x683.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- every card title and their images -->
+              <div class="mySlides fade">
+                <!--parent of whole card -->
+                <div class="main-card">
+                  <div class="textOfCard">
+                    <h2><a href="#"> DOUBLE ROOM</a></h2>
+                    <p>A QUALITY ROOM WITH SEA OR MOUNT VIEW</p>
+                    <span class="iconify" data-icon="cil:tv"></span>
+                    <span class="iconify" data-icon="si-glyph:safe-box"></span>
+                    <span class="iconify" data-icon="jam:hairdryer"></span>
+                    <p class="excerpt">
+                      More than 100 rooms, suites and apartments have accommodated
+                      many illustrious residents, such as members of resort royal
+                      families, famous politicians and stars of film and opera. The
+                      hotel is a masterpiece rediscovered.
+                    </p>
+                    <a class="readMore" href="#">READ MORE
+                       <hr class="read-more-hover">
+                    </a>
+                  </div>
+                  <img
+                    src="./assets/pic/room-1.jpg"
+                    style="width: 50%; height: 50vh"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- every card title and their images -->
+              <div class="mySlides fade">
+                <!--parent of whole card -->
+                <div class="main-card">
+                  <div class="textOfCard">
+                    <h2><a href="#"> FAMILY SUITE!</a></h2>
+                    <p>BRING YOUR FAMILY IN THIS SPACIOUS SUITE</p>
+                    <span class="iconify" data-icon="cil:tv"></span>
+                    <span class="iconify" data-icon="si-glyph:safe-box"></span>
+                    <span class="iconify" data-icon="jam:hairdryer"></span>
+                    <p class="excerpt">
+                      With just 30 villas, this stunning fully inclusive resort evokes
+                      the heritage of luxury dating back to the era of the Sultans.
+                      Superior Queen bathrooms include a room shower with a rainfall
+                      hotel.
+                    </p>
+                    <a class="readMore" href="#">READ MORE
+                        <hr class="read-more-hover">
+                    </a>
+                  </div>
+                  <img
+                    src="./assets/pic/room-3.jpg"
+                    style="width: 50%; height: 50vh"
+                    alt=""
+                  />
+                </div>
+              </div>   
+      
+              <!-- every card title and their images -->
+              <div class="mySlides fade">
+                <!--parent of whole card -->
+                <div class="main-card">
+                  <div class="textOfCard">
+                    <h2><a href="#">DELUXE KING SUITE</a></h2>
+                    <p>KINGS AND QUEENS SLEEP HERE!</p>
+                    <span class="iconify" data-icon="cil:tv"></span>
+                    <span class="iconify" data-icon="si-glyph:safe-box"></span>
+                    <span class="iconify" data-icon="jam:hairdryer"></span>
+                    <p class="excerpt">
+                      With just 30 villas, this stunning fully inclusive resort evokes
+                      the heritage of luxury dating back to the era of the Sultans.
+                      Superior Queen bathrooms include a room shower with a rainfall
+                      hotel.
+                    </p>
+                    <a class="readMore" href="#">READ MORE
+                       <hr class="read-more-hover">
+                    </a>
+                  </div>
+                  <img
+                    src="./assets/pic/badd.jpg"
+                    style="width: 50%; height: 50vh"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div style="text-align: center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+          </div>
+      
+          <div class="people">
+            <h2>
+              TESTIMONIALS
+              <p>LOVELY PEOPLE - AMAZING EXPERIENCES</p>
+            </h2>
+            <img src="./assets/pic/Ornament.png" alt="" />
+          </div>
+          <!-- third slider-->
+          <div class="parentOfSecondSlider">
+            <div class="textImgSlider">
+              <div class="textImg trans">
+                <div class="layoutImgTxt">
+                  <img src="./assets/pic/profile-2.jpg" alt="" />
+                  <div class="textSlides">
+                    <h2>
+                      Since the Garden of Eden…
+                      <h3>
+                        Was great not have to use the inter-island terminal. The
+                        service is impeccable and they make you feel so welcome and
+                        everything is truly a can-do attitude.
+                      </h3>
+                    </h2>
+                    <span class="testimonial_author"
+                      >Christine Glassier <span>Interior Designer</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="textImg trans">
+                <div class="layoutImgTxt">
+                  <img src="./assets/pic/profile.jpg" alt="" />
+                  <div
+                    class="textSlides"
+                    style="display: flex; flex-direction: column"
+                  >
+                    <h2>HAD THE TIME OF OUR LIFE</h2>
+                    <h3>
+                      Our room was spacious and spotless. We had such a relaxing time
+                      and will recommend this hotel to all our friends. We will return
+                      for sure!…&nbsp;The service is impeccable and they make you feel
+                      so welcome and everything is truly a can-do attitude. The front
+                      office manager provides a special touch by remembering your
+                      visits.
+                    </h3>
+                    <span class="testimonial_author">Jasmine Karturo</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="textImg trans">
+                <div class="layoutImgTxt">
+                  <img src="./assets/pic/avatar-1-70x70.webp" alt="" />
+                  <div
+                    class="textSlides"
+                    style="display: flex; flex-direction: column"
+                  >
+                    <h2>Since the Garden of Eden…</h2>
+                    <p>
+                      Was great not have to use the inter-island terminal. The service
+                      is impeccable and they make you feel so welcome and everything
+                      is truly a can-do attitude.
+                    </p>
+                    <span class="testimonial_author">Christine Glassier</span>
+                    <span class="testimonial_author_role">Interior Designer</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="textImg trans">
+                <div class="layoutImgTxt">
+                  <img src="./assets/pic/avatar-3.jpg" alt="" />
+                  <div
+                    class="textSlides"
+                    style="display: flex; flex-direction: column"
+                  >
+                    <h2>Since the Garden of Eden…</h2>
+                    <p>
+                      Was great not have to use the inter-island terminal. The service
+                      is impeccable and they make you feel so welcome and everything
+                      is truly a can-do attitude.
+                    </p>
+                    <span class="testimonial_author">Christine Glassier</span>
+                    <span class="testimonial_author_role">Interior Designer</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="textImg trans">
+                <div class="layoutImgTxt">
+                  <img src="./assets/pic/avatar-4.jpg" alt="" />
+                  <div
+                    class="textSlides"
+                    style="display: flex; flex-direction: column"
+                  >
+                    <h2>Since the Garden of Eden…</h2>
+                    <p>
+                      Was great not have to use the inter-island terminal. The service
+                      is impeccable and they make you feel so welcome and everything
+                      is truly a can-do attitude.
+                    </p>
+                    <span class="testimonial_author">Christine Glassier</span>
+                    <span class="testimonial_author_role">Interior Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="textImg trans">
+                <div class="layoutImgTxt">
+                  <img src="./assets/pic/avatar-2.jpg" alt="" />
+                  <div
+                    class="textSlides"
+                    style="display: flex; flex-direction: column"
+                  >
+                    <h2>Since the Garden of Eden…</h2>
+                    <p>
+                      Was great not have to use the inter-island terminal. The service
+                      is impeccable and they make you feel so welcome and everything
+                      is truly a can-do attitude.
+                    </p>
+                    <span class="testimonial_author">Christine Glassier</span>
+                    <span class="testimonial_author_role">Interior Designer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="text-align: center">
+              <span class="otherdot" onclick="currentSlides(1)"></span>
+              <span class="otherdot" onclick="currentSlides(2)"></span>
+              <span class="otherdot" onclick="currentSlides(3)"></span>
+              <span class="otherdot" onclick="currentSlides(4)"></span>
+              <span class="otherdot" onclick="currentSlides(5)"></span>
+              <span class="otherdot" onclick="currentSlides(6)"></span>
+            </div>
+          </div>
+
+
+          <footer>
+             <div>
+                <img src="./assets/pic/logo.webp" alt="logo">
+             </div>
+             <div class="footer-info">
+                <div class="footer-items"><i class="icon fa fa-phone"></i>(+30) 210 1234567</div>
+                <div class="footer-items"><i class="icon fa fa-envelope"></i><a class="icon2" href="info@plethora-xenia.com"> info@plethora-xenia.com</a></div>
+                <div class="footer-items"><i class="icon icon3 fa fa-location-arrow"></i>79 Folsom, San Francisco, 566</div>
+             </div>
+             <div class="spacing"></div>
+          </footer>
+          <div class="under-footer">
+             <p>COPYRIGHT © 2020 ALL RIGHTS RESERVED XENIA HOTEL</p>
+             <img src="./assets/pic/award.webp" alt="logo">
+             <ul id="menu-footer-bar-menu" class="footerbar_menu">
+               <li class="under-footer-li"><a title="Home" href="#">Home</a></li>
+               <li class="under-footer-li"><a title="Rooms" href="#">Rooms</a></li>
+               <li class="under-footer-li"><a title="Package offer" href="#">Package offer</a></li>
+               <li class="under-footer-li"><a title="Spa Salon" href="#">Spa Salon</a></li>
+               <li class="under-footer-li"><a title="Hotel Gym" href="#">Hotel Gym</a></li>
+               <li class="under-footer-li"><a title="Contact" href="#">Contact</a></li>
+               </ul>
+          </div>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+      <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+      <script src="./assets/main.js"></script>
+   </body>
+</html>
+
+
